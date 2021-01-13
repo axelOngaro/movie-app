@@ -1,17 +1,40 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class MovieList extends Component {
+  state = { number: 0 };
+
+  increment = () => {
+    const { number } = this.state;
+    this.setState({
+      number: number + 1,
+    });
+    console.log(this.state.number);
+  };
+
+  decrement = () => {
+    const { number } = this.state;
+    this.setState({
+      number: number - 1,
+    });
+  };
+
   render() {
     return (
       <React.Fragment>
+        <div>
+          <button onClick={this.increment} className="btn btn-success">
+            Increment number
+          </button>
+          <button onClick={this.decrement} className="btn btn-danger">
+            Decrement number
+          </button>
+          <h1>{this.state.number}</h1>
+        </div>
+
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <a href="#">
-              <img
-                className="card-img-top"
-                src="http://placehold.it/700x400"
-                alt=""
-              />
+              <img className="card-img-top" src="http://placehold.it/700x400" alt="" />
             </a>
             <div className="card-body">
               <h4 className="card-title">
@@ -19,8 +42,8 @@ export default class MovieList extends Component {
               </h4>
               <h5>$24.99</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                numquam aspernatur!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                aspernatur!
               </p>
             </div>
             <div className="card-footer">
@@ -34,11 +57,7 @@ export default class MovieList extends Component {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <a href="#">
-              <img
-                className="card-img-top"
-                src="http://placehold.it/700x400"
-                alt=""
-              />
+              <img className="card-img-top" src="http://placehold.it/700x400" alt="" />
             </a>
             <div className="card-body">
               <h4 className="card-title">
@@ -46,8 +65,8 @@ export default class MovieList extends Component {
               </h4>
               <h5>$24.99</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                numquam aspernatur! Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                aspernatur! Lorem ipsum dolor sit amet.
               </p>
             </div>
             <div className="card-footer">
@@ -61,11 +80,7 @@ export default class MovieList extends Component {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <a href="#">
-              <img
-                className="card-img-top"
-                src="http://placehold.it/700x400"
-                alt=""
-              />
+              <img className="card-img-top" src="http://placehold.it/700x400" alt="" />
             </a>
             <div className="card-body">
               <h4 className="card-title">
@@ -73,8 +88,8 @@ export default class MovieList extends Component {
               </h4>
               <h5>$24.99</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                numquam aspernatur!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                aspernatur!
               </p>
             </div>
             <div className="card-footer">
@@ -88,11 +103,7 @@ export default class MovieList extends Component {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <a href="#">
-              <img
-                className="card-img-top"
-                src="http://placehold.it/700x400"
-                alt=""
-              />
+              <img className="card-img-top" src="http://placehold.it/700x400" alt="" />
             </a>
             <div className="card-body">
               <h4 className="card-title">
@@ -100,8 +111,8 @@ export default class MovieList extends Component {
               </h4>
               <h5>$24.99</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                numquam aspernatur!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                aspernatur!
               </p>
             </div>
             <div className="card-footer">
@@ -115,11 +126,7 @@ export default class MovieList extends Component {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <a href="#">
-              <img
-                className="card-img-top"
-                src="http://placehold.it/700x400"
-                alt=""
-              />
+              <img className="card-img-top" src="http://placehold.it/700x400" alt="" />
             </a>
             <div className="card-body">
               <h4 className="card-title">
@@ -127,8 +134,8 @@ export default class MovieList extends Component {
               </h4>
               <h5>$24.99</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                numquam aspernatur! Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                aspernatur! Lorem ipsum dolor sit amet.
               </p>
             </div>
             <div className="card-footer">
@@ -142,11 +149,7 @@ export default class MovieList extends Component {
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">
             <a href="#">
-              <img
-                className="card-img-top"
-                src="http://placehold.it/700x400"
-                alt=""
-              />
+              <img className="card-img-top" src="http://placehold.it/700x400" alt="" />
             </a>
             <div className="card-body">
               <h4 className="card-title">
@@ -154,8 +157,8 @@ export default class MovieList extends Component {
               </h4>
               <h5>$24.99</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                numquam aspernatur!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam
+                aspernatur!
               </p>
             </div>
             <div className="card-footer">
